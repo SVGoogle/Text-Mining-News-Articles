@@ -1,3 +1,6 @@
 release/
 .ipynb_checkpoints/
+__pycache__/
+.idea/
 article_data.csv
+Covid19_text_classifier
