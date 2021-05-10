@@ -9,7 +9,7 @@ from collections import Counter
 
 
 def get_word_counts(words):
-    """This function returns a dictionary of word counts."""
+    """This function returns a dictionary of word counts given a word list."""
     return dict(Counter(words))
 
 
