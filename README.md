@@ -1,9 +1,9 @@
 # Text Mining. News Articles Data
 
 This repository contains the following sections:
-1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](##-1.-implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
-2. [Analysis of COVID-19 Related News Article Proportions](##2.-analysis-of-covid-19-related-news-article-proportions)
-3. [Named Entitity Recognition](## 3.-named-entitity-recognition)
+1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](#1.-implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
+2. [Analysis of COVID-19 Related News Article Proportions](#2.-analysis-of-covid-19-related-news-article-proportions)
+3. [Named Entitity Recognition](#3.-named-entitity-recognition)
 
 ## Dataset retrieval
 
