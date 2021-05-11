@@ -1,16 +1,25 @@
 # Text Mining. News Articles Data
 
-This repository contains of the following sections:
+This repository contains the following sections:
 1. Implementing Naive Bayes Classifier for Text Classification from Scratch
 2. Analysis of COVID-19 Related News Article Proportions
 3. Named Entitity Recognition
 
 ## Dataset retrieval
 
-Article text data that is used in to perform text mining tasks is already gathered and extracted. The dataset is described in more detail under the following links:
-- News Article data is described here: <http://sciride.org/news.html>
+Textual news article data is already gathered beforehand. The dataset is available for everyone and is described under the following links:
+- News article data is described here: <http://sciride.org/news.html>
 - The processed articles are available here (~16 GB, download completed in May 2021): [Articles Dataset](https://news-mine.s3.eu-west-2.amazonaws.com/processed.tar.gz)
 - With the relevant documentation here: <http://sciride.org/news.html#datacontent>
+
+However, in order to use this dataset for other text mining task, the article data and information must be extracted first. 
+This includes unzipping the files and 
+The extraction process is described in the file [Text mining - News Articles.ipynb](./Text mining - News Articles.ipynb)
+
+Text pre-processing includes: 
+- Filtering articles by news outlet domain name, language and dates
+- Tagging COVID-19 articles using Regular expressions
+- Prepraring training and test data splits
 
 ## 1. Implementing Naive Bayes Classifier for Text Classification from Scratch
 
