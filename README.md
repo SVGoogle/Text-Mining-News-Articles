@@ -7,18 +7,21 @@
 
 ## Implementing Naive Bayes Classifier for Text Classification from Scratch
 
-The classifier is implemented as a Python class object called TextNaiveBayes. The class objects implement the following text processing pipeline and methods:
-- Tokenization of the data (from text to sentences to words), removing punctuation and English stopwords
-- Normalization of the tokenized text via stemming (or lemmatization)
-- Creating a vocabulary of distinct word tokens
-- Counting word tokens in each class (is_covid, not_covid)
-- Fitting the training data
-- Predicting on the test data
-- Estimating the performance of the classifier using accuracy score
+The classifier is implemented as a Python class object called TextNaiveBayes . 
+The class objects implement the following text processing pipeline and methods:
+1. Tokenization of the data (from text to sentences to words), removing punctuation and English stopwords
+2. Normalization of the tokenized text via stemming (or lemmatization)
+3. Creating a vocabulary of distinct word tokens
+4. Counting word tokens in each class (is_covid, not_covid)
+5. Fitting the training data
+6. Predicting labels on the test data
+7. Estimating the performance of the classifier using accuracy score metric
 
-### Model training results
-- The model was trained on 80% of data (
-- Text Naive Bayes classifier achieved accuracy score of 0.96 on the remaining 20% of data.
+>### Model training results
+>
+>- The model is trained on 80% data
+>- Text Naive Bayes classifier achieved 96% accuracy on the remaining 20% test data
+>
 
 ## Analysis of COVID-19 Related News Article Proportions
 In this section the previously trained Naive Bayes classifier is used to predict if the news article is related to COVID-19 topic.
