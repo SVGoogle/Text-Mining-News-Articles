@@ -13,7 +13,8 @@ This repository contains the following sections:
 ## 1. Implementing Naive Bayes Classifier for Text Classification from Scratch
 
 The classifier is implemented as a Python class object called **TextNaiveBayes**, see the file [textnb.py](./textnb.py).
-If you download the file [textnb.py](./textnb.py) in your code, you can 
+If you download the file [textnb.py](./textnb.py) in your code folder, you can import import it:
+
     from textnb import TextNaiveBayes
 
 The TextNaiveBayes class has the following text processing pipeline:
@@ -52,10 +53,22 @@ It can be seen that BBC News has almost the same proportions with ~21% of articl
 The figure below shows the monthly proportions of articles. Data from December month is not complete.
 ![Monthly Proportions](./Results/covid19_proportion_monthly_2020.png "Monthly Proportion of COVID-19 Related Articles")
 
+It can be seen that it took some time (January, February) before the COVID-19 reached higher interest (March, April, May) and was taken more seriously. Especially, considering that the first news about a new novel coronavirus started already in late December 2019, so there can be observed a lag.
+This developemnt coincides with the announcement from World Health Organization (WHO) on 11 March 2020 when the coronavirus outbreak had been labelled a pandemic.
+
 ## 3. Named Entitity Recognition
 In this section the most commonly mentioned Named Entities with respect to COVID-19 are extracted using the statistical model from [spaCy](https://spacy.io/) library.
-spaCy can recognize various types of named entities in a document, by asking the model for a prediction. 
-Because models are statistical and strongly depend on the examples they were trained on, this doesn’t always work perfectly and might need some tuning later, depending on your use case.
+spaCy can recognize various types of named entities in a document, by asking the model for a prediction. Because models are statistical and strongly depend on the examples they were trained on. 
+For example, 'en_core_web_sm' that was used in this code is a small English pipeline trained on written web text (blogs, news, comments). It first must be downloaded:
+
+	python -m spacy download en_core_web_sm
+
+Loading pretrained statistical model to use it for Named Entitity Recognition:
+
+	import spacy
+	nlp = spacy.load("en_core_web_sm")
+
+Named Entities are gathered from articles related to COVID-19 topic only.
 In the figure below the most common Named Entities (100 words) are shown.
  
 ![NER word cloud](./Results/covid19_ner_wordcloud.png "COVID-19 Named Entity WordCloud")
