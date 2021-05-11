@@ -3,3 +3,4 @@ release/
 __pycache__/
 .idea/
 article_data.csv
+predicted_article_data.bz2

@@ -9,4 +9,8 @@
 
 ## Analysis of COVID-19 related news article frequency
 
+![Proportions 2020](./Results/covid19_proportion_2020.png)
+
+![Monthly Proportions](./Results/covid19_proportion_monthly_2020.png)
+
 ## Named Entitity Recognition
