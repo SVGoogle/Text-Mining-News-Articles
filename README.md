@@ -1,9 +1,9 @@
 # Text Mining. News Articles Data
 
 This repository contains the following sections:
-1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](#implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
-2. [Analysis of COVID-19 Related News Article Proportions](#analysis-of-covid-19-related-news-article-proportions)
-3. [Named Entitity Recognition](#named-entitity-recognition)
+1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](#---implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
+2. [Analysis of COVID-19 Related News Article Proportions](#--analysis-of-covid-19-related-news-article-proportions)
+3. [Named Entitity Recognition](#-named-entitity-recognition)
 
 ## Dataset retrieval
 
@@ -92,10 +92,10 @@ In the figure below the most common Named Entities (100 words) are shown.
 In the figure below the most common persons are shown. 
 ![NER Persons wordcloud](./Results/covid19_persons_wordcloud.png "Most Common Person COVID-19 NER")
 
-In the figure below the most common organizations are shown. 
+In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as organizations.
 ![NER Organizations wordcloud](./Results/covid19_organizations_wordcloud.png "Most Common Organizations COVID-19 NER")
 
 >### NER Summary
 >- Most common named from all entities related to COVID-19 topic are US, UK, China, Donald Trump, Coronavirus etc.
 >- Most common persons are: Donald Trump, Boris Johnson, Joe Biden, Andrew Cuomo, Anthony Fauci etc.
->- Most common organizations are: 
+>- Most common organizations are: NHS, White House, The World Health Organization, Covid
