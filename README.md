@@ -61,11 +61,11 @@ The figure below shows the proportions of all articles published in 2020 compare
 ![Proportions 2020](./Results/covid19_proportion_2020.png "Proportion of COVID-19 Related Articles")
 It can be seen that BBC News has almost the same proportions with ~21% of articles related to COVID-19.
 
-The figure below shows the monthly proportions of all articles. Data from December month is not complete and is excluded.
+The figure below shows the monthly proportions of all articles. Data from December is not complete and thus is excluded.
 ![Monthly Proportions](./Results/covid19_proportion_monthly_2020.png "Monthly Proportion of COVID-19 Related Articles")
 
-It can be seen that it took some time (January, February) before the new coronavirus reached higher interest (March, April, May) and response was taken more seriously. Especially, the observed a lag must be considered taking into account that the first news about a novel coronavirus started to circulate in late December of 2019.
-This timeline developemnt coincides with the World Health Organization's (WHO) announcement on 11 March 2020 when WHO labelled the coronavirus outbreak a pandemic.
+It can be seen that it took some time (January, February) before Coronavirus reached higher interest (March, April, May) and response was taken more seriously. The observed lag must be considered taking into account that the first news about the novel coronavirus started to circulate in late December of 2019.
+This timeline developement coincides with the World Health Organization's (WHO) announcement on 11 March 2020 when WHO labelled the coronavirus outbreak a pandemic.
 
 >### Analysis Summary
 >- Average proportion of English Online News Outlets articles related to COVID-19 in 2020 is **~21%**
@@ -93,7 +93,7 @@ In the figure below the most common Named Entities (100 words) are shown. Immedi
 In the figure below the most common persons are shown. It can be seen that sometimes 'Trump' and 'Donal Trump' are counted as separate entities and this must be taken into account when summarizing the results.
 ![NER Persons wordcloud](./Results/covid19_persons_wordcloud.png "Most Common Person COVID-19 NER")
 
-In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as organizations and must be accounted for.
+In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as an organization and it must be accounted for.
 ![NER organizations wordcloud](./Results/covid19_organizations_wordcloud.png "Most Common Organizations COVID-19 NER")
 
 >### NER Summary
