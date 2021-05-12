@@ -86,17 +86,17 @@ Loading pretrained statistical model to use it for Named Entitity Recognition:
 Named Entities are gathered only from articles related to COVID-19 topic that is classified by previously trained Naive Bayes classifier.
 The numeric entitities like quantities, dates, time, percent, ordinal and cardinal entities are removed from the entity list produced by spaCy statisstical model. 
 Immediate issues can be detected that the country names like 'US', 'U.S.' and 'United States' are categorized as separate entities, however they shall be merged together. This is done when accounting for the most common entities in the summary part.
+
 In the figure below the most common Named Entities (100 words) are shown. 
  
 ![NER wordcloud](./Results/covid19_ner_wordcloud.png "Most Common Named Entities COVID-19 NER")
 
-In the figure below the most common persons are shown. 
+In the figure below the most common persons are shown. It can be seen that sometimes 'Trump' and 'Donal Trump' are counted as separate entities and this must be taken into account when summarizing the results.
 ![NER Persons wordcloud](./Results/covid19_persons_wordcloud.png "Most Common Person COVID-19 NER")
 
-In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as organizations.
-![NER Organizations wordcloud](./Results/covid19_organizations_wordcloud.png "Most Common Organizations COVID-19 NER")
+In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as organizations and must be accounted for.
 
 >### NER Summary
 >- Most common named from all entities related to COVID-19 topic are US, UK, China, Donald Trump, Coronavirus et al.
 >- Most common persons are Donald Trump, Boris Johnson, Joe Biden, Andrew Cuomo, Anthony Fauci et al.
->- Most common organizations are NHS, White House, The World Health Organization, Covid et al.
+>- Most common organizations are NHS, White House, The World Health Organization et al.
