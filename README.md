@@ -74,7 +74,7 @@ This timeline developemnt coincides with the World Health Organization's (WHO) a
 ## 3. Named Entitity Recognition (NER)
 In this section the most commonly mentioned Named Entities with respect to COVID-19 are extracted using the statistical model from [spaCy](https://spacy.io/) library.
 spaCy can recognize various types of named entities (like people, places, organizations etc.) in a text (document), by asking the pretrained models for a prediction. Because models are statistical and strongly depend on the examples they were trained on, they must be tuned for special applications. 
-For example, 'en_core_web_sm' - that wass used in this analysis - is a small spaCy English pipeline that is trained on written web text (blogs, news, comments). It first must be downloaded:
+For example, 'en_core_web_sm' - that was used in this analysis - is a small spaCy English pipeline that is trained on written web text (blogs, news, comments). It first must be downloaded as follows:
 
 	python -m spacy download en_core_web_sm
 
@@ -85,9 +85,8 @@ Loading pretrained statistical model to use it for Named Entitity Recognition:
 
 Named Entities are gathered only from articles related to COVID-19 topic that is classified by previously trained Naive Bayes classifier.
 The numeric entitities like quantities, dates, time, percent, ordinal and cardinal entities are removed from the entity list produced by spaCy statisstical model. 
-Immediate issues can be detected that the country names like 'US', 'U.S.' and 'United States' are categorized as separate entities, however they shall be merged together. This is done when accounting for the most common entities in the summary part.
 
-In the figure below the most common Named Entities (100 words) are shown. 
+In the figure below the most common Named Entities (100 words) are shown. Immediate issues can be detected that the country names like 'US', 'U.S.' and 'United States' are categorized as separate entities, however they shall be merged together. This is done when accounting for the most common entities in the summary part.
  
 ![NER wordcloud](./Results/covid19_ner_wordcloud.png "Most Common Named Entities COVID-19 NER")
 
@@ -95,6 +94,7 @@ In the figure below the most common persons are shown. It can be seen that somet
 ![NER Persons wordcloud](./Results/covid19_persons_wordcloud.png "Most Common Person COVID-19 NER")
 
 In the figure below the most common organizations are shown. It can be seen that 'Trump', 'Covid' and 'Coronavirus' also have been categorised as organizations and must be accounted for.
+![NER organizations wordcloud](./Results/covid19_organizations_wordcloud.png "Most Common Organizations COVID-19 NER")
 
 >### NER Summary
 >- Most common named from all entities related to COVID-19 topic are US, UK, China, Donald Trump, Coronavirus et al.
