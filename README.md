@@ -13,7 +13,7 @@ Textual news article data is already gathered beforehand. The dataset is availab
 - The relevant data documentation here: <http://sciride.org/news.html#datacontent>
 
 However, in order to use this dataset for other text mining tasks, the data and article information must be extracted from subfolders stored as .gzip files.
-The extraction process is described in the file [Text mining - News Articles.ipynb](./Text%20mining%20-%20News%20Articles.ipynb) and includes several usefule functions.
+The extraction process is described in the file [Text mining - News Articles.ipynb](./Text%20mining%20-%20News%20Articles.ipynb) and already includes several usefull functions.
 
 Dataset preparation includes the following tasks: 
 1. Filtering articles by news outlet domain name, language and dates
@@ -54,13 +54,14 @@ One can download the pre-trained model file [Covid19_Text_Classifier](./Covid19_
 
 ## 2. Analysis of COVID-19 Related News Article Proportions
 In this section the previously trained Naive Bayes classifier is used to predict if the news article is related to COVID-19 topic.
+In this project only online news outlets with English language are analysed (see other available languages in [available_outlets.json](./available_outlets.json) file). Also model is trained only on the article data from 2019 and 2020.
 
 The figure below shows the proportions of all articles published in 2020 compared to BBC News outlet.
 
 ![Proportions 2020](./Results/covid19_proportion_2020.png "Proportion of COVID-19 Related Articles")
 It can be seen that BBC News has almost the same proportions with ~21% of articles related to COVID-19.
 
-The figure below shows the monthly proportions of articles. Data from December month is not complete and is excluded.
+The figure below shows the monthly proportions of all articles. Data from December month is not complete and is excluded.
 ![Monthly Proportions](./Results/covid19_proportion_monthly_2020.png "Monthly Proportion of COVID-19 Related Articles")
 
 It can be seen that it took some time (January, February) before the new coronavirus reached higher interest (March, April, May) and response was taken more seriously. Especially, the observed a lag must be considered taking into account that the first news about a novel coronavirus started to circulate in late December of 2019.
@@ -68,7 +69,7 @@ This timeline developemnt coincides with the World Health Organization's (WHO) a
 
 >### Analysis Summary
 >- Average proportion of English Online News Outlets articles related to COVID-19 in 2020 is **~21%**
->- Highest monthly proportion **~41%** was reached in April 2020 after WHO labeled coronavirus outbreak a pandemic on 11 March 2020 .
+>- Highest monthly proportion **~41%** was reached in April 2020 after WHO labeled coronavirus outbreak a pandemic on 11 March 2020.
 
 ## 3. Named Entitity Recognition (NER)
 In this section the most commonly mentioned Named Entities with respect to COVID-19 are extracted using the statistical model from [spaCy](https://spacy.io/) library.
