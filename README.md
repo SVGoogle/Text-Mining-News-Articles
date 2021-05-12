@@ -1,9 +1,9 @@
 # Text Mining. News Articles Data
 
 This repository contains the following sections:
-1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](#1.-implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
-2. [Analysis of COVID-19 Related News Article Proportions](#2.-analysis-of-covid-19-related-news-article-proportions)
-3. [Named Entitity Recognition](#3.-named-entitity-recognition)
+1. [Implementation of Naive Bayes Classifier for Text Classification from Scratch](#implementation-of-naive-bayes-classifier-for-text-classification-from-scratch)
+2. [Analysis of COVID-19 Related News Article Proportions](#analysis-of-covid-19-related-news-article-proportions)
+3. [Named Entitity Recognition](#named-entitity-recognition)
 
 ## Dataset retrieval
 
@@ -13,7 +13,7 @@ Textual news article data is already gathered beforehand. The dataset is availab
 - The relevant data documentation here: <http://sciride.org/news.html#datacontent>
 
 However, in order to use this dataset for other text mining tasks, the data and article information must be extracted from subfolders stored as .gzip files.
-The extraction process is described in the file [Text mining - News Articles.ipynb](./Text mining - News Articles.ipynb) and includes several usefule functions.
+The extraction process is described in the file [Text mining - News Articles.ipynb](./Text%20mining%20-%20News%20Articles.ipynb) and includes several usefule functions.
 
 Dataset preparation includes the following tasks: 
 1. Filtering articles by news outlet domain name, language and dates
@@ -70,7 +70,7 @@ This timeline developemnt coincides with the World Health Organization's (WHO) a
 >- Average proportion of English Online News Outlets articles related to COVID-19 in 2020 is **~21%**
 >- Highest monthly proportion **~41%** was reached in April 2020 after WHO labeled coronavirus outbreak a pandemic on 11 March 2020 .
 
-## 3. Named Entitity Recognition
+## 3. Named Entitity Recognition (NER)
 In this section the most commonly mentioned Named Entities with respect to COVID-19 are extracted using the statistical model from [spaCy](https://spacy.io/) library.
 spaCy can recognize various types of named entities (like people, places, organizations etc.) in a text (document), by asking the pretrained models for a prediction. Because models are statistical and strongly depend on the examples they were trained on, they must be tuned for special applications. 
 For example, 'en_core_web_sm' - that wass used in this analysis - is a small spaCy English pipeline that is trained on written web text (blogs, news, comments). It first must be downloaded:
@@ -83,9 +83,19 @@ Loading pretrained statistical model to use it for Named Entitity Recognition:
 	nlp = spacy.load("en_core_web_sm")
 
 Named Entities are gathered only from articles related to COVID-19 topic that is classified by previously trained Naive Bayes classifier.
-In the figure below the most common Named Entities (100 words) are shown.
+The numeric entitities like quantities, dates, time, percent, ordinal and cardinal entities are removed from the entity list produced by spaCy statisstical model. 
+Immediate issues can be detected that the country names like 'US', 'U.S.' and 'United States' are categorized as separate entities, however they shall be merged together. This is done when accounting for the most common entities in the summary part.
+In the figure below the most common Named Entities (100 words) are shown. 
  
-![NER word cloud](./Results/covid19_ner_wordcloud.png "COVID-19 Named Entity WordCloud")
+![NER wordcloud](./Results/covid19_ner_wordcloud.png "Most Common Named Entities COVID-19 NER")
 
->### Named Entitity Recognition Summary
->- Most common named entities related to COVID-19 topic are Coronavirus, COVID-19 etc.
+In the figure below the most common persons are shown. 
+![NER Persons wordcloud](./Results/covid19_persons_wordcloud.png "Most Common Person COVID-19 NER")
+
+In the figure below the most common organizations are shown. 
+![NER Organizations wordcloud](./Results/covid19_organizations_wordcloud.png "Most Common Organizations COVID-19 NER")
+
+>### NER Summary
+>- Most common named from all entities related to COVID-19 topic are US, UK, China, Donald Trump, Coronavirus etc.
+>- Most common persons are: Donald Trump, Boris Johnson, Joe Biden, Andrew Cuomo, Anthony Fauci etc.
+>- Most common organizations are: 
